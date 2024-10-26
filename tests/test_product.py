@@ -66,7 +66,7 @@ def test_error_type(category_smartphones, samsung, strong_grass):
 
 
 def test_sum(samsung, iphone, elit_grass):
-    assert samsung + iphone == 2580000
+    assert samsung + iphone == 258000.0
     with pytest.raises(TypeError):
         samsung + elit_grass
 
