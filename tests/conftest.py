@@ -77,7 +77,7 @@ def category_smart(product_1, product_2, product_3):
 
 
 @pytest.fixture
-def category_smartphones():
+def category_smartphones(samsung, iphone):
     category_smartphones = Category("Смартфоны", "Высокотехнологичные смартфоны", [samsung, iphone])
     return category_smartphones
 
@@ -104,4 +104,11 @@ def counter_2(product_2, product_3):
 
 @pytest.fixture
 def sum_counter(category_smart):
+    return f"{category_smart.name}, {category_smart.products[0].quantity + category_smart.products[1].quantity + category_smart.products[2].quantity} шт."
+
+
+@pytest.fixture
+def empty_category(category_smart):
+    category_empty = Category("Пустая категория", "Категория без продуктов", [])
+    return category_empty
     return f"{category_smart.name}, {category_smart.products[0].quantity + category_smart.products[1].quantity + category_smart.products[2].quantity} шт."
