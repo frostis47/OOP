@@ -21,25 +21,24 @@ class Category:
 
 
 if __name__ == '__main__':
-    # Проверка на создание продукта с неверным количеством
     try:
-        product_invalid = Product("Бракованный товар", 0, 1000.0)  # Изменено на 0 для проверки
+        product_invalid = Product("Бракованный товар", 0, 1000.0)
     except ValueError as e:
         print("Возникла ошибка ValueError при попытке добавить продукт с нулевым количеством:", e)
     else:
         print("Не возникла ошибка ValueError при попытке добавить продукт с нулевым количеством")
 
-    # Создание валидных продуктов
+
     product1 = Product("Samsung Galaxy S23 Ultra", 5, 180000.0)
     product2 = Product("Iphone 15", 8, 210000.0)
     product3 = Product("Xiaomi Redmi Note 11", 14, 31000.0)
 
-    # Создание категории с продуктами
+
     category1 = Category("Смартфоны", "Категория смартфонов", [product1, product2, product3])
 
-    # Вывод средней цены в категории
+
     print("Средняя цена в категории 'Смартфоны':", category1.average_price())
 
-    # Создание пустой категории
+
     category_empty = Category("Пустая категория", "Категория без продуктов", [])
     print("Средняя цена в пустой категории:", category_empty.average_price())
