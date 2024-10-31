@@ -54,10 +54,10 @@ if __name__ == '__main__':
     print(grass2.color)
 
     smartphone_sum = smartphone1 + smartphone2
-    print(smartphone_sum)
+    print(f"Сумма цен смартфонов: {smartphone_sum}")
 
     grass_sum = grass1 + grass2
-    print(grass_sum)
+    print(f"Сумма цен газонов: {grass_sum}")
 
     try:
         invalid_sum = smartphone1 + grass1
@@ -81,3 +81,4 @@ if __name__ == '__main__':
         print("Возникла ошибка TypeError при добавлении не продукта")
     else:
         print("Не возникла ошибка TypeError при добавлении не продукта")
+
