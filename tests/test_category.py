@@ -37,3 +37,8 @@ def test_category(category_smart, product_4):
 
 def test_sum_counter(sum_counter):
     assert sum_counter == "Смартфоны, 27 шт."
+
+def test_middle_price(category_smart, category_smartphones, empty_category):
+    assert category_smart.middle_price(), 2 == 140333.33  # (900000 + 1680000 + 434000) / (5 + 8 + 14)
+    assert category_smartphones.middle_price(), 2 == 195000.0  # (900000 + 1680000) / (5 + 8)
+    assert empty_category.middle_price() == 0

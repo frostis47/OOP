@@ -39,7 +39,7 @@ class Category:
     def middle_price(self):
         total_price = sum(product.price for product in self.__products)
         try:
-            middle_price = total_price / Category.product_count
+            middle_price = total_price / len(self.__products)
         except ZeroDivisionError:
             return 0
         return round(middle_price, 2)

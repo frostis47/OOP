@@ -1,7 +1,5 @@
 class Product:
     def __init__(self, name, quantity, price):
-        if quantity <= 0:
-            raise ValueError("Товар с нулевым количеством не может быть добавлен")
         self.name = name
         self.quantity = quantity
         self.price = price

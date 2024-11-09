@@ -76,3 +76,6 @@ def test_classes():
     assert issubclass(Product, Mixin) is True
     assert issubclass(Mixin, object) is True
     assert issubclass(BaseProduct, object) is True
+def test_invalid_product():
+    with pytest.raises(ValueError, match='Товар с нулевым количеством не может быть добавлен'):
+        Product("Бракованный товар", "Неверное количество", 1000.0, 0)
